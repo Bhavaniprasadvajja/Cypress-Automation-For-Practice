@@ -1,0 +1,8 @@
+{
+    "FieldName": "bob",
+    "id": "Female",
+    "PWD": "bob",
+    "Emailid": "rahul@gmail.com",
+    "productName": ["iphone X","Samsung Note 8","Nokia Edge","Blackberry"],
+    "Country":"India"
+}
