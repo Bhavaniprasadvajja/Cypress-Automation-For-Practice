@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "cypress": "^13.11.0",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "faker": "^5.5.3",
+    "papaparse": "^5.4.1"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.1.0",
+    "@cypress/browserify-preprocessor": "latest"
+  },
+  "scripts": {
+    "test": "npx cypress run --headed --browser chrome --spec 'cypress/e2e/integration/integrationTestCases/alertsInCypress.cy.js,cypress/e2e/integration/integrationTestCases/autoTestCase.cy.js'",
+    "Somketest": "npx cypress run --headed --browser chrome --spec 'cypress/e2e/integration/integrationTestCases/*.cy.js'"
+  }
+}
