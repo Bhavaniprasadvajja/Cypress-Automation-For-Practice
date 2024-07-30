@@ -24,7 +24,13 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --unsafe-perm
+
+      - name: Verify Cypress Installation
+        run: npx cypress verify
+
+      - name: Set permissions for Cypress binary
+        run: chmod +x ./node_modules/.bin/cypress
 
       - name: Run Cypress tests
         run: npx cypress run
