@@ -9,4 +9,4 @@ jobs:
       - uses: cypress-io/github-action@v6
         with:
           browser: chrome
-        command: npm cypress run test
+    command: npm cypress run test
