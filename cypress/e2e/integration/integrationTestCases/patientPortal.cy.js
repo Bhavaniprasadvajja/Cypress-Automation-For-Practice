@@ -59,8 +59,8 @@ describe('Patient Portal', () => {
 
         cy.visit(Cypress.env('URL4'));
 
-        // Iterate over each user in the fixture
-        this.data.forEach((user) => {
+        //Iterate over each user in the fixture
+    this.data.forEach((user) => {
     PatientPortal.getUser().click();
     PatientPortal.getUser().type(user.userName);
     PatientPortal.getPwd().type(user.PassWard);
@@ -71,5 +71,19 @@ describe('Patient Portal', () => {
     PatientPortal.getLogoutApplication().click();
     PatientPortal.getYesButton().click();
         });
+    var n=this.data.length
+
+    for(var i=0; i<n; i++){
+        PatientPortal.getUser().click();
+    PatientPortal.getUser().type(this.data[i].userName);
+    PatientPortal.getPwd().type(this.data[i].PassWard);
+    PatientPortal.getSubmit().click();
+    PatientPortal.getPayment().click();
+    cy.wait(2000)
+    PatientPortal.getImagination().click();
+    PatientPortal.getLogoutApplication().click();
+    PatientPortal.getYesButton().click();
+
+    }
     });
 });
